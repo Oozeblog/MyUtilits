@@ -40,22 +40,31 @@
             this.btnReset = new System.Windows.Forms.Button();
             this.btnPlus = new System.Windows.Forms.Button();
             this.tabPage2 = new System.Windows.Forms.TabPage();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
-            this.lblRandom = new System.Windows.Forms.Label();
-            this.btnRandom = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.tbRandom = new System.Windows.Forms.TextBox();
-            this.btnRandomClear = new System.Windows.Forms.Button();
-            this.btnRandomCopy = new System.Windows.Forms.Button();
             this.cbRandom = new System.Windows.Forms.CheckBox();
+            this.btnRandomCopy = new System.Windows.Forms.Button();
+            this.btnRandomClear = new System.Windows.Forms.Button();
+            this.tbRandom = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.btnRandom = new System.Windows.Forms.Button();
+            this.lblRandom = new System.Windows.Forms.Label();
+            this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
+            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
+            this.tabPage3 = new System.Windows.Forms.TabPage();
+            this.rtbNotepade = new System.Windows.Forms.RichTextBox();
+            this.блокнотToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiDate = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiTime = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLoad = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.tabPage2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            this.tabPage3.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -63,6 +72,7 @@
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.файлToolStripMenuItem,
+            this.блокнотToolStripMenuItem,
             this.помощьToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -102,6 +112,7 @@
             // 
             // tabControl1
             // 
+            this.tabControl1.Controls.Add(this.tabPage3);
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
             this.tabControl1.Dock = System.Windows.Forms.DockStyle.Fill;
@@ -129,7 +140,7 @@
             // 
             this.lblCount.AutoSize = true;
             this.lblCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblCount.Location = new System.Drawing.Point(123, 144);
+            this.lblCount.Location = new System.Drawing.Point(113, 144);
             this.lblCount.Name = "lblCount";
             this.lblCount.Size = new System.Drawing.Size(50, 54);
             this.lblCount.TabIndex = 3;
@@ -140,7 +151,7 @@
             this.btnMinus.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnMinus.Location = new System.Drawing.Point(103, 233);
             this.btnMinus.Name = "btnMinus";
-            this.btnMinus.Size = new System.Drawing.Size(91, 84);
+            this.btnMinus.Size = new System.Drawing.Size(69, 70);
             this.btnMinus.TabIndex = 2;
             this.btnMinus.Text = "-";
             this.btnMinus.UseVisualStyleBackColor = true;
@@ -148,10 +159,10 @@
             // 
             // btnReset
             // 
-            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnReset.Location = new System.Drawing.Point(267, 132);
+            this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnReset.Location = new System.Drawing.Point(243, 131);
             this.btnReset.Name = "btnReset";
-            this.btnReset.Size = new System.Drawing.Size(223, 79);
+            this.btnReset.Size = new System.Drawing.Size(179, 67);
             this.btnReset.TabIndex = 1;
             this.btnReset.Text = "Сброс";
             this.btnReset.UseVisualStyleBackColor = true;
@@ -162,7 +173,7 @@
             this.btnPlus.Font = new System.Drawing.Font("Microsoft Sans Serif", 28.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.btnPlus.Location = new System.Drawing.Point(103, 29);
             this.btnPlus.Name = "btnPlus";
-            this.btnPlus.Size = new System.Drawing.Size(91, 84);
+            this.btnPlus.Size = new System.Drawing.Size(69, 70);
             this.btnPlus.TabIndex = 0;
             this.btnPlus.Text = "+";
             this.btnPlus.UseVisualStyleBackColor = true;
@@ -188,6 +199,101 @@
             this.tabPage2.Text = "Генератор";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
+            // cbRandom
+            // 
+            this.cbRandom.AutoSize = true;
+            this.cbRandom.Location = new System.Drawing.Point(312, 11);
+            this.cbRandom.Name = "cbRandom";
+            this.cbRandom.Size = new System.Drawing.Size(135, 20);
+            this.cbRandom.TabIndex = 9;
+            this.cbRandom.Text = "без повторений";
+            this.cbRandom.UseVisualStyleBackColor = true;
+            // 
+            // btnRandomCopy
+            // 
+            this.btnRandomCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRandomCopy.Location = new System.Drawing.Point(255, 288);
+            this.btnRandomCopy.Name = "btnRandomCopy";
+            this.btnRandomCopy.Size = new System.Drawing.Size(144, 38);
+            this.btnRandomCopy.TabIndex = 8;
+            this.btnRandomCopy.Text = "Скопировать";
+            this.btnRandomCopy.UseVisualStyleBackColor = true;
+            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
+            // 
+            // btnRandomClear
+            // 
+            this.btnRandomClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRandomClear.Location = new System.Drawing.Point(435, 288);
+            this.btnRandomClear.Name = "btnRandomClear";
+            this.btnRandomClear.Size = new System.Drawing.Size(123, 38);
+            this.btnRandomClear.TabIndex = 7;
+            this.btnRandomClear.Text = "Очистить";
+            this.btnRandomClear.UseVisualStyleBackColor = true;
+            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            // 
+            // tbRandom
+            // 
+            this.tbRandom.Location = new System.Drawing.Point(312, 37);
+            this.tbRandom.Multiline = true;
+            this.tbRandom.Name = "tbRandom";
+            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.tbRandom.Size = new System.Drawing.Size(178, 223);
+            this.tbRandom.TabIndex = 6;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Location = new System.Drawing.Point(37, 157);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 25);
+            this.label3.TabIndex = 5;
+            this.label3.Text = "До";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label2.Location = new System.Drawing.Point(37, 39);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(41, 25);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "От";
+            // 
+            // btnRandom
+            // 
+            this.btnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnRandom.Location = new System.Drawing.Point(58, 239);
+            this.btnRandom.Name = "btnRandom";
+            this.btnRandom.Size = new System.Drawing.Size(170, 48);
+            this.btnRandom.TabIndex = 3;
+            this.btnRandom.Text = "Сгенерировать";
+            this.btnRandom.UseVisualStyleBackColor = true;
+            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            // 
+            // lblRandom
+            // 
+            this.lblRandom.AutoSize = true;
+            this.lblRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblRandom.Location = new System.Drawing.Point(168, 92);
+            this.lblRandom.Name = "lblRandom";
+            this.lblRandom.Size = new System.Drawing.Size(33, 36);
+            this.lblRandom.TabIndex = 2;
+            this.lblRandom.Text = "0";
+            // 
+            // numericUpDown2
+            // 
+            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.numericUpDown2.Location = new System.Drawing.Point(114, 155);
+            this.numericUpDown2.Name = "numericUpDown2";
+            this.numericUpDown2.Size = new System.Drawing.Size(143, 30);
+            this.numericUpDown2.TabIndex = 1;
+            this.numericUpDown2.Value = new decimal(new int[] {
+            6,
+            0,
+            0,
+            0});
+            // 
             // numericUpDown1
             // 
             this.numericUpDown1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -201,100 +307,77 @@
             0,
             0});
             // 
-            // numericUpDown2
+            // tabPage3
             // 
-            this.numericUpDown2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.numericUpDown2.Location = new System.Drawing.Point(114, 133);
-            this.numericUpDown2.Name = "numericUpDown2";
-            this.numericUpDown2.Size = new System.Drawing.Size(143, 30);
-            this.numericUpDown2.TabIndex = 1;
-            this.numericUpDown2.Value = new decimal(new int[] {
-            6,
-            0,
-            0,
-            0});
+            this.tabPage3.Controls.Add(this.rtbNotepade);
+            this.tabPage3.Location = new System.Drawing.Point(4, 25);
+            this.tabPage3.Name = "tabPage3";
+            this.tabPage3.Size = new System.Drawing.Size(581, 358);
+            this.tabPage3.TabIndex = 2;
+            this.tabPage3.Text = "Блокнот";
+            this.tabPage3.UseVisualStyleBackColor = true;
             // 
-            // lblRandom
+            // rtbNotepade
             // 
-            this.lblRandom.AutoSize = true;
-            this.lblRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblRandom.Location = new System.Drawing.Point(161, 82);
-            this.lblRandom.Name = "lblRandom";
-            this.lblRandom.Size = new System.Drawing.Size(33, 36);
-            this.lblRandom.TabIndex = 2;
-            this.lblRandom.Text = "0";
+            this.rtbNotepade.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rtbNotepade.Location = new System.Drawing.Point(0, 0);
+            this.rtbNotepade.Name = "rtbNotepade";
+            this.rtbNotepade.Size = new System.Drawing.Size(581, 358);
+            this.rtbNotepade.TabIndex = 0;
+            this.rtbNotepade.Text = "";
             // 
-            // btnRandom
+            // блокнотToolStripMenuItem
             // 
-            this.btnRandom.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRandom.Location = new System.Drawing.Point(87, 186);
-            this.btnRandom.Name = "btnRandom";
-            this.btnRandom.Size = new System.Drawing.Size(170, 74);
-            this.btnRandom.TabIndex = 3;
-            this.btnRandom.Text = "Сгенерировать";
-            this.btnRandom.UseVisualStyleBackColor = true;
-            this.btnRandom.Click += new System.EventHandler(this.btnRandom_Click);
+            this.блокнотToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiDate,
+            this.tsmiTime,
+            this.toolStripMenuItem1,
+            this.tsmiSave,
+            this.tsmiLoad});
+            this.блокнотToolStripMenuItem.Name = "блокнотToolStripMenuItem";
+            this.блокнотToolStripMenuItem.Size = new System.Drawing.Size(80, 24);
+            this.блокнотToolStripMenuItem.Text = "Блокнот";
             // 
-            // label2
+            // tsmiDate
             // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label2.Location = new System.Drawing.Point(37, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(41, 25);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "От";
+            this.tsmiDate.Name = "tsmiDate";
+            this.tsmiDate.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.D)));
+            this.tsmiDate.Size = new System.Drawing.Size(291, 26);
+            this.tsmiDate.Text = "Вставить дату";
+            this.tsmiDate.Click += new System.EventHandler(this.tsmiDate_Click);
             // 
-            // label3
+            // tsmiTime
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(37, 135);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(42, 25);
-            this.label3.TabIndex = 5;
-            this.label3.Text = "До";
+            this.tsmiTime.Name = "tsmiTime";
+            this.tsmiTime.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.T)));
+            this.tsmiTime.Size = new System.Drawing.Size(291, 26);
+            this.tsmiTime.Text = "Вставить время";
+            this.tsmiTime.Click += new System.EventHandler(this.tsmiTime_Click);
             // 
-            // tbRandom
+            // toolStripMenuItem1
             // 
-            this.tbRandom.Location = new System.Drawing.Point(312, 37);
-            this.tbRandom.Multiline = true;
-            this.tbRandom.Name = "tbRandom";
-            this.tbRandom.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
-            this.tbRandom.Size = new System.Drawing.Size(178, 223);
-            this.tbRandom.TabIndex = 6;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(288, 6);
             // 
-            // btnRandomClear
+            // tsmiSave
             // 
-            this.btnRandomClear.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRandomClear.Location = new System.Drawing.Point(87, 276);
-            this.btnRandomClear.Name = "btnRandomClear";
-            this.btnRandomClear.Size = new System.Drawing.Size(170, 64);
-            this.btnRandomClear.TabIndex = 7;
-            this.btnRandomClear.Text = "Очистить";
-            this.btnRandomClear.UseVisualStyleBackColor = true;
-            this.btnRandomClear.Click += new System.EventHandler(this.btnRandomClear_Click);
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.S)));
+            this.tsmiSave.Size = new System.Drawing.Size(291, 26);
+            this.tsmiSave.Text = "Сохранить";
+            this.tsmiSave.Click += new System.EventHandler(this.tsmiSave_Click);
             // 
-            // btnRandomCopy
+            // tsmiLoad
             // 
-            this.btnRandomCopy.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnRandomCopy.Location = new System.Drawing.Point(312, 276);
-            this.btnRandomCopy.Name = "btnRandomCopy";
-            this.btnRandomCopy.Size = new System.Drawing.Size(170, 64);
-            this.btnRandomCopy.TabIndex = 8;
-            this.btnRandomCopy.Text = "Скопировать";
-            this.btnRandomCopy.UseVisualStyleBackColor = true;
-            this.btnRandomCopy.Click += new System.EventHandler(this.btnRandomCopy_Click);
-            // 
-            // cbRandom
-            // 
-            this.cbRandom.AutoSize = true;
-            this.cbRandom.Location = new System.Drawing.Point(312, 11);
-            this.cbRandom.Name = "cbRandom";
-            this.cbRandom.Size = new System.Drawing.Size(135, 20);
-            this.cbRandom.TabIndex = 9;
-            this.cbRandom.Text = "без повторений";
-            this.cbRandom.UseVisualStyleBackColor = true;
+            this.tsmiLoad.Name = "tsmiLoad";
+            this.tsmiLoad.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.tsmiLoad.Size = new System.Drawing.Size(291, 26);
+            this.tsmiLoad.Text = "Загрузить";
+            this.tsmiLoad.Click += new System.EventHandler(this.tsmiLoad_Click);
             // 
             // MainForm
             // 
@@ -306,6 +389,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainForm";
             this.Text = "Мои утилиты";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.tabControl1.ResumeLayout(false);
@@ -313,8 +397,9 @@
             this.tabPage1.PerformLayout();
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            this.tabPage3.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -344,6 +429,14 @@
         private System.Windows.Forms.Button btnRandomClear;
         private System.Windows.Forms.Button btnRandomCopy;
         private System.Windows.Forms.CheckBox cbRandom;
+        private System.Windows.Forms.ToolStripMenuItem блокнотToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiDate;
+        private System.Windows.Forms.ToolStripMenuItem tsmiTime;
+        private System.Windows.Forms.TabPage tabPage3;
+        private System.Windows.Forms.RichTextBox rtbNotepade;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSave;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLoad;
     }
 }
 
