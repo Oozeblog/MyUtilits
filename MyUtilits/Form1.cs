@@ -14,6 +14,7 @@ namespace MyUtilits
     {
         int count = 0;
         Random rnd;
+        char[] spes_chars = new char[] {'%', '*', ')', '?', '#', '$', '^', '&', '~'};
         public MainForm()
         {
             InitializeComponent();
@@ -117,6 +118,32 @@ namespace MyUtilits
         private void MainForm_Load(object sender, EventArgs e)
         {
             LoadNotepade();
+            clbPassword.SetItemChecked(0, true);
+        }
+
+        private void btnCreatePass_Click(object sender, EventArgs e)
+        {
+            if (clbPassword.CheckedItems.Count == 0) return;
+            string password = "";
+            for (int i = 0; i < nudPassLeng.Value; i++)
+            {
+                int n = rnd.Next(0, clbPassword.CheckedItems.Count);
+                string s = clbPassword.CheckedItems[n].ToString();
+                switch (s)
+                {
+                    case "Цифры": password += rnd.Next(10).ToString();
+                        break;
+                    case "Прописные буквы": password += Convert.ToChar(rnd.Next(65, 88));
+                        break;
+                    case "Строчные буквы": password += Convert.ToChar(rnd.Next(97, 122));
+                        break;
+                    default:
+                        password += spes_chars[rnd.Next(spes_chars.Length)];
+                        break;
+                }
+                tbPassword.Text = password;
+                Clipboard.SetText(password);
+            }
         }
     }
 }
