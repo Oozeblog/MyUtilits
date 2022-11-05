@@ -13,9 +13,11 @@ namespace MyUtilits
     public partial class MainForm : Form
     {
         int count = 0;
+        Random rnd;
         public MainForm()
         {
             InitializeComponent();
+            rnd = new Random();
         }
 
         private void tsmiExit_Click(object sender, EventArgs e)
@@ -44,6 +46,13 @@ namespace MyUtilits
         {
             count = 0;
             lblCount.Text = Convert.ToString(count);
+        }
+
+        private void btnRandom_Click(object sender, EventArgs e)
+        {
+            int n;
+            n = rnd.Next(Convert.ToInt32(numericUpDown1.Value), Convert.ToInt32(numericUpDown2.Value));
+            lblRandom.Text = n.ToString();
         }
     }
 }
