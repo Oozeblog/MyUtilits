@@ -70,6 +70,8 @@
             this.tbFrom = new System.Windows.Forms.TextBox();
             this.tbTo = new System.Windows.Forms.TextBox();
             this.btnConvert = new System.Windows.Forms.Button();
+            this.btnSwap = new System.Windows.Forms.Button();
+            this.cbMetric = new System.Windows.Forms.ComboBox();
             this.menuStrip1.SuspendLayout();
             this.tabControl1.SuspendLayout();
             this.tabPage4.SuspendLayout();
@@ -475,6 +477,8 @@
             // 
             // tabPage5
             // 
+            this.tabPage5.Controls.Add(this.cbMetric);
+            this.tabPage5.Controls.Add(this.btnSwap);
             this.tabPage5.Controls.Add(this.btnConvert);
             this.tabPage5.Controls.Add(this.tbTo);
             this.tabPage5.Controls.Add(this.tbFrom);
@@ -497,7 +501,7 @@
             "m",
             "km",
             "mile"});
-            this.cbFrom.Location = new System.Drawing.Point(24, 60);
+            this.cbFrom.Location = new System.Drawing.Point(38, 153);
             this.cbFrom.Name = "cbFrom";
             this.cbFrom.Size = new System.Drawing.Size(121, 24);
             this.cbFrom.TabIndex = 0;
@@ -513,7 +517,7 @@
             "m",
             "km",
             "mile"});
-            this.cbTo.Location = new System.Drawing.Point(303, 60);
+            this.cbTo.Location = new System.Drawing.Point(317, 153);
             this.cbTo.Name = "cbTo";
             this.cbTo.Size = new System.Drawing.Size(121, 24);
             this.cbTo.TabIndex = 1;
@@ -521,7 +525,7 @@
             // 
             // tbFrom
             // 
-            this.tbFrom.Location = new System.Drawing.Point(24, 107);
+            this.tbFrom.Location = new System.Drawing.Point(38, 200);
             this.tbFrom.Name = "tbFrom";
             this.tbFrom.Size = new System.Drawing.Size(121, 22);
             this.tbFrom.TabIndex = 2;
@@ -529,7 +533,7 @@
             // 
             // tbTo
             // 
-            this.tbTo.Location = new System.Drawing.Point(303, 106);
+            this.tbTo.Location = new System.Drawing.Point(317, 199);
             this.tbTo.Name = "tbTo";
             this.tbTo.ReadOnly = true;
             this.tbTo.Size = new System.Drawing.Size(121, 22);
@@ -537,13 +541,36 @@
             // 
             // btnConvert
             // 
-            this.btnConvert.Location = new System.Drawing.Point(173, 82);
+            this.btnConvert.Location = new System.Drawing.Point(181, 198);
             this.btnConvert.Name = "btnConvert";
             this.btnConvert.Size = new System.Drawing.Size(106, 23);
             this.btnConvert.TabIndex = 4;
             this.btnConvert.Text = "Перевести";
             this.btnConvert.UseVisualStyleBackColor = true;
             this.btnConvert.Click += new System.EventHandler(this.btnConvert_Click);
+            // 
+            // btnSwap
+            // 
+            this.btnSwap.Location = new System.Drawing.Point(181, 154);
+            this.btnSwap.Name = "btnSwap";
+            this.btnSwap.Size = new System.Drawing.Size(106, 23);
+            this.btnSwap.TabIndex = 5;
+            this.btnSwap.Text = "<--->";
+            this.btnSwap.UseVisualStyleBackColor = true;
+            this.btnSwap.Click += new System.EventHandler(this.btnSwap_Click);
+            // 
+            // cbMetric
+            // 
+            this.cbMetric.FormattingEnabled = true;
+            this.cbMetric.Items.AddRange(new object[] {
+            "длина",
+            "вес"});
+            this.cbMetric.Location = new System.Drawing.Point(181, 97);
+            this.cbMetric.Name = "cbMetric";
+            this.cbMetric.Size = new System.Drawing.Size(121, 24);
+            this.cbMetric.TabIndex = 6;
+            this.cbMetric.Text = "длина";
+            this.cbMetric.SelectedIndexChanged += new System.EventHandler(this.cbMetric_SelectedIndexChanged);
             // 
             // MainForm
             // 
@@ -620,6 +647,8 @@
         private System.Windows.Forms.TextBox tbFrom;
         private System.Windows.Forms.ComboBox cbTo;
         private System.Windows.Forms.ComboBox cbFrom;
+        private System.Windows.Forms.Button btnSwap;
+        private System.Windows.Forms.ComboBox cbMetric;
     }
 }
 
